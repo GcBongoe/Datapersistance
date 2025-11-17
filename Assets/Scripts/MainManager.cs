@@ -69,6 +69,7 @@ public class MainManager : MonoBehaviour
             }
         }
     }
+    //Best score text 
     void SetBest()
     {
         string path = Application.persistentDataPath + "/name.txt";
@@ -94,11 +95,13 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    //Save score to files
     void saveHighScore()
     {
         File.WriteAllText(Application.persistentDataPath + "/score.txt", BestScore.ToString());
         File.WriteAllText(Application.persistentDataPath + "/bname.txt", BestName);
     }
+    //update points 
     void AddPoint(int point)
     {
         m_Points += point;
